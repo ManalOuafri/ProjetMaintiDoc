@@ -1,0 +1,35 @@
+[project]
+name = "maintidoc"
+version = "0.1.0"
+description = "MaintiDoc - Partie I : RAG multimodal agentique (LlamaIndex + PGVector + CLIP + Qwen/Ollama + LangChain + Streamlit)"
+readme = "README.md"
+requires-python = ">=3.11,<3.14"
+dependencies = [
+    # --- Extraction & indexation (LlamaIndex) ---
+    "llama-index-core>=0.12",
+    "llama-index-readers-file>=0.4",
+    "llama-index-vector-stores-postgres>=0.4",
+    "llama-index-embeddings-huggingface>=0.5",
+    "pymupdf>=1.24",
+    # --- Modèles open source (embeddings texte + CLIP) ---
+    "torch>=2.3",
+    "transformers>=4.44",
+    "sentence-transformers>=3.0",
+    "pillow>=10.0",
+    # --- LLM local + agent ---
+    "ollama>=0.4",
+    "langchain>=1.0",
+    "langchain-ollama>=0.3",
+    "langgraph>=1.0",
+    # --- Base de données ---
+    "psycopg2-binary>=2.9",
+    "asyncpg>=0.29",
+    "sqlalchemy>=2.0",
+    # --- Interface ---
+    "streamlit>=1.38",
+    "python-dotenv>=1.0",
+    "llama-index-embeddings-ollama>=0.11.0",
+]
+
+[tool.uv]
+package = false
